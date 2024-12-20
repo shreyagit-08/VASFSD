@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Clone</title>
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Navbar Styling */
+        nav {
+            background-color: #2e2e2e;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style-type: none;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            text-transform: uppercase;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: #f8b400;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background-image: url('https://via.placeholder.com/1920x1080');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin: 0;
+            padding: 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+
+        .cta-button {
+            background-color: #f8b400;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background-color: #ff9900;
+        }
+
+        /* Menu Section */
+        .menu {
+            background-color: #fff;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .menu h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #2e2e2e;
+        }
+
+        .menu-item {
+            display: inline-block;
+            width: 30%;
+            margin: 0 10px 30px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .menu-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .menu-item h3 {
+            font-size: 1.8rem;
+            margin-top: 15px;
+            color: #2e2e2e;
+        }
+
+        .menu-item p {
+            font-size: 1rem;
+            color: #777;
+            margin-top: 10px;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #2e2e2e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        footer a {
+            color: #f8b400;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .menu-item {
+                width: 45%;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .cta-button {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+
+            nav ul li {
+                margin: 0 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .menu-item {
+                width: 100%;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar Section -->
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div>
+            <h1>Welcome to ABES Restaurant</h1>
+            <p>Experience the finest culinary delights</p>
+            <a href="#menu" class="cta-button">View Menu</a>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu" id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-item">
+            <img src="https://via.placeholder.com/300x200" alt="Dish 1">
+            <h3>Grilled Salmon</h3>
+            <p>A delicious grilled salmon with a citrus glaze.</p>
+        </div>
+        <div class="menu-item">
+            <img src="https://via.placeholder.com/300x200" alt="Dish 2">
+            <h3>Pasta Primavera</h3>
+            <p>A fresh vegetable pasta tossed with garlic and olive oil.</p>
+        </div>
+        <div class="menu-item">
+            <img src="https://via.placeholder.com/300x200" alt="Dish 3">
+            <h3>Steak Frites</h3>
+            <p>Juicy steak served with crispy fries and a rich sauce.</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>© 2024 Gourmet Restaurant. All rights reserved.</p>
+        <p>Made with ❤️. Visit our <a href="#contact">Contact</a> page for more info.</p>
+    </footer>
+
+</body>
+</html>

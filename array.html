@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utility Program</title>
+</head>
+<body>
+    <h1>Utility Program</h1>
+
+    <!-- Display Day of the Week -->
+    <section>
+        <h2>Day of the Week</h2>
+        <input type="number" id="dayNumber" placeholder="Enter a number (1-7)">
+        <button onclick="displayDay()">Get Day</button>
+        <p id="dayOutput"></p>
+    </section>
+
+    <!-- Add First and Last Name to Array -->
+    <section>
+        <h2>Add Name to Array</h2>
+        <input type="text" id="firstName" placeholder="First Name">
+        <input type="text" id="lastName" placeholder="Last Name">
+        <button onclick="addName()">Add Name</button>
+        <p id="nameOutput"></p> 
+    </section>
+
+    <!-- Find Double or Square Root -->
+    <section>
+        <h2>Double or Square Root</h2>
+        <input type="number" id="number" placeholder="Enter a number">
+        <button onclick="calculate()">Calculate</button>
+        <p id="calcOutput"></p>
+    </section>
+
+    <script>
+        //display day of the week
+        function displayDay() {
+            const dayNumber = parseInt(document.getElementById("dayNumber").value);
+            const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            const output = document.getElementById("dayOutput");
+            if (dayNumber >= 1 && dayNumber <= 7) {
+                output.textContent = `The day is: ${days[dayNumber - 1]}`;
+            } else {
+                output.textContent = "Please enter a number between 1 and 7.";
+            }
+        }
+
+        // Add first and last name to array
+        const names = [];
+        function addName() {
+            const firstName = document.getElementById("firstName").value;
+            const lastName = document.getElementById("lastName").value;
+            if (firstName && lastName) {
+                names.push(`${firstName} ${lastName}`);
+                document.getElementById("nameOutput").textContent = `Names: ${names.join(", ")}`;
+            } else {
+                document.getElementById("nameOutput").textContent = "Please enter both first and last names.";
+            }
+        }
+
+        // Calculate double or square root
+        function calculate() {
+            const num = parseFloat(document.getElementById("number").value);
+            const output = document.getElementById("calcOutput");
+            if (isNaN(num)) {
+                output.textContent = "Please enter a valid number.";
+            } else if (num % 2 === 0) {
+                output.textContent = `Double: ${num * 2}`;
+            } else {
+                output.textContent = `Square Root: ${Math.sqrt(num).toFixed(2)}`;
+            }
+        }
+    </script>
+</body>
+</html>
+//wap to count vowels in given string.
+//wap ro find prime number between 1 to 100.
+//wap to  check entered mobile number is valid or not.
+//wap to check entered name and email id is valid or not.

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meesho Clone</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    /* Header */
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #ff3e6c;
+      color: white;
+      padding: 10px 15px;
+    }
+
+    .header .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .header .search-bar input {
+      padding: 5px;
+      border: none;
+      border-radius: 5px;
+      width: 70%;
+    }
+
+    .header .icons {
+      display: flex;
+      align-items: center;
+    }
+
+    .header .icons .icon {
+      margin-left: 15px;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    /* Categories */
+    .categories {
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+      background-color: white;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .categories .category {
+      padding: 5px 10px;
+      background-color: #ffe9f0;
+      border-radius: 15px;
+      font-size: 0.9rem;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .categories .category:hover {
+      background-color: #ffbcd0;
+    }
+
+    /* Products Section */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+      padding: 15px;
+    }
+
+    .product {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      text-align: center;
+      padding: 10px;
+      transition: transform 0.3s;
+    }
+
+    .product:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 5px;
+    }
+
+    .product h3 {
+      font-size: 1rem;
+      margin: 10px 0;
+    }
+
+    .product p {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    /* Footer Navigation */
+    .footer {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: white;
+      border-top: 1px solid #ddd;
+      padding: 10px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .footer .nav-item {
+      font-size: 1rem;
+      color: #333;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    .footer .nav-item:hover {
+      color: #ff3e6c;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">Meesho Clone</div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search for products, brands, and more...">
+    </div>
+    <div class="icons">
+      <span class="icon">🔔</span>
+      <span class="icon">🛒</span>
+    </div>
+  </header>
+
+  <!-- Categories Section -->
+  <section class="categories">
+    <div class="category">Women Ethnic</div>
+    <div class="category">Men</div>
+    <div class="category">Kids</div>
+    <div class="category">Home & Kitchen</div>
+    <div class="category">Beauty</div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products">
+    <div class="product">
+      <img src="https://www.alamodelabel.in/cdn/shop/products/WhatsAppImage2022-12-16at11.18.57AM_600x.jpg?v=1733859489" alt="Product 1">
+      <h3>Product 1</h3>
+      <p>₹799</p>
+    </div>
+    <div class="product">
+      <img src="https://www.drsheths.com/cdn/shop/products/CVC-Sunscreen_600x.jpg?v=1665755509" alt="Product 2">
+      <h3>Product 2</h3>
+      <p>₹129</p>
+    </div>
+    <div class="product">
+      <img src="https://plumgoodness.com/cdn/shop/files/04_00cd4d1b-ed47-4177-87c2-cd2083b45402.jpg?v=1732012135&width=1214" alt="Product 3">
+      <h3>Product 3</h3>
+      <p>₹499</p>
+    </div>
+    <div class="product">
+      <img src="https://www.jiomart.com/images/product/original/rv6mndmfzg/birde-stylish-comfortable-walking-running-wear-sports-shoes-for-men-product-images-rv6mndmfzg-0-202305260642.jpg?im=Resize=(500,630)"alt = "Product 4">
+      <h3>Product 4</h3>
+      <p>₹999</p>
+    </div>
+  </section>
+
+  <!-- Footer Navigation -->
+  <footer class="footer">
+    <div class="nav-item">Home</div>
+    <div class="nav-item">Categories</div>
+    <div class="nav-item">Orders</div>
+    <div class="nav-item">Account</div>
+  </footer>
+</body>
+</html>
